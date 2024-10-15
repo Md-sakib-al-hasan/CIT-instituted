@@ -1,3 +1,4 @@
+import OurPopularCourses from "../../components/our_popular_courses/OurPopularCourses";
 import About_our_technology from "../About_us/components/About_our_technology/About_our_technology";
 import Benefit from "../About_us/components/Benefit/Benefit";
 import BannerSilder from "./components/Banner/Banner";
@@ -17,6 +18,7 @@ export default function Home() {
      <section><Skilledteacherandsupport></Skilledteacherandsupport></section>
      <section><OurInstructor></OurInstructor></section>
      <section><SeeDetail></SeeDetail></section>
+     <section><OurPopularCourses></OurPopularCourses></section>
     </div>
   )
 }

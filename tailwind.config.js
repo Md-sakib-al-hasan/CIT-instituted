@@ -17,6 +17,7 @@ export default {
   plugins: [
     require('daisyui'),
     require('tailwindcss-animated'),
+    require('@tailwindcss/line-clamp'),
   ],
 }
 
