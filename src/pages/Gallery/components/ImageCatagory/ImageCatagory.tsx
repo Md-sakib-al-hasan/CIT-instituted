@@ -6,7 +6,7 @@ import Poopup from "../Poopup/Poopup";
 
 function ImageCatagory() {
     const [imagepoopup,setImagepoopup] = useState<string>("")
-    const menulist = ["all","Campus", "Study", "Classes", "Library"];
+    const menulist = ["all","Campus", "Study", "Classes",];
     const imgelist = [
         "https://i.ibb.co.com/8cYhzfs/247708048-423456392531226-5295894135862364241-n.jpg",
         "https://i.ibb.co.com/ZX66GpY/pexels-joao-victor-valeriote-3691654-12579155.jpg",

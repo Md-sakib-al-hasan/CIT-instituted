@@ -10,6 +10,7 @@ import Coures from "../../pages/Coures/Coures";
 import SingelCourse from "../../pages/Coures/components/singelCourse/SingelCourse";
 import Gallery from "../../pages/Gallery/Gallery";
 import About_us from "../../pages/About_us/About_us";
+import UserProfile from "../../pages/Userprofile/Userprofile";
 
 
   const router = createBrowserRouter([
@@ -49,6 +50,10 @@ import About_us from "../../pages/About_us/About_us";
         {
           path:"/About_us",
           element:<About_us></About_us>
+        },
+        {
+          path:"/User_profile",
+          element:<UserProfile></UserProfile>
         }
       ]
     },

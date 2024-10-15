@@ -13,7 +13,7 @@ export default function Navigatiobar() {
    "About us",
     "Gallery",
     "courses",
-   "Contact us","sign in","login"]
+   "Contact us","sign in","login","User profile"]
    
   return (
     <div className="navbar flex justify-between  w-11/12 max-w-[1280px]  mx-auto">

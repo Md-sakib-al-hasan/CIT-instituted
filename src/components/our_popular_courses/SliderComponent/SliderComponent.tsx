@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { BiMessageRounded } from "react-icons/bi";
+import { FaUser } from "react-icons/fa";
 
 
 // Define the type for instructor items
@@ -57,27 +59,34 @@ const SliderComponent: React.FC<SliderComponentProps> = ({ instructiorarray }) =
 
   return (
     <div className="relative w-11/12 max-w-[1280px]  mx-auto">
+      
       <ul className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {instructiorarray
-          .slice(currentIndex, currentIndex + visibleItems) // Show only visible items
-          .map((item, id) => (
-            <li key={id} className=" relative group">
-              <div className="space-y-5">
-                <div className="relative">
-                  <img src={item.img} className="h-[300px] object-cover" alt={item.name} />
-             
-                </div>
-                <div className="space-y-1 flex flex-col justify-between ">
-                  <span className="block text-lg font-semibold capitalize  ">{item.name}</span>
-                  <span className="block line-clamp-2 ">{item.category}</span>
-                </div>
-                <button>
-                    see more deatisl
-                </button>
-              </div>
-            </li>
-          ))}
-      </ul>
+  {instructiorarray
+    .slice(currentIndex, currentIndex + visibleItems) // Show only visible items
+    .map((item, id) => (
+      <li key={id} className="relative group  min-h-[450px]"> {/* Set a minimum height for each list item */}
+        <div className="space-y-5 h-full flex flex-col justify-between"> {/* Ensure the content fills the full height */}
+          <div className="relative">
+            <img src={item.img} className="h-[300px] object-cover w-full" alt={item.name} />
+          </div>
+          <div className="space-y-1 flex flex-col justify-between flex-1"> {/* Stretch the text section */}
+            <span className="block text-lg font-semibold capitalize">{item.name}</span>
+            <span className="text-gray-600 line-clamp-2">{item.category}</span>
+          </div>
+          <span className="flex justify-between"> {/* Place the button at the bottom */}
+            <span className="flex gap-3">
+            <span className="flex items-center gap-2"> <FaUser /> 75</span>
+            <span className="flex items-center gap-2"><BiMessageRounded /> 35</span>
+            </span>
+            <span className="bg-[#ff4f01] text-white py-1 px-2">
+                 $400
+            </span>
+          </span>
+        </div>
+      </li>
+    ))}
+</ul>
+
 
       {/* Left arrow */}
       <button
