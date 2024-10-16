@@ -1,9 +1,11 @@
-
+import bg from "../../assets/Header/pantagon.jpg"
 
 const Login = () => {
   return (
-    <div
-      className="h-screen flex items-center justify-center bg-cover bg-center bg-pantagon"
+       <div className="relative h-screen">
+        <img src={bg} alt="" />
+         <div
+      className=" absolute inset-0 flex items-center justify-center bg-cover bg-center bg-pantagon"
     
     >
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
@@ -45,6 +47,7 @@ const Login = () => {
         </p>
       </div>
     </div>
+       </div>
   );
 };
 

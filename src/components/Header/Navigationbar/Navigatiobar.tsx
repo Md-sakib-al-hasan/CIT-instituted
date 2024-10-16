@@ -37,7 +37,7 @@ export default function Navigatiobar() {
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           {
-            navigationlist.map(lsit => <li><NavLink to={`/${lsit === "Home"?"":lsit.replace(/\s+/g, "_")}`}>{lsit}</NavLink></li>)
+            navigationlist.map((lsit,id) => <li key={id}><NavLink to={`/${lsit === "Home"?"":lsit.replace(/\s+/g, "_")}`}>{lsit}</NavLink></li>)
 
           }
         </ul>
@@ -47,7 +47,7 @@ export default function Navigatiobar() {
     <div className=" hidden lg:flex pr-20">
       <ul className=" flex  px-1">
        {
-        navigationlist.map(list => <li className=" capitalize  px-4 font-semibold text-[17px] "><NavLink to={`/${list === "Home"?"":list.replace(/\s+/g, "_")}`}  className={({ isActive, isPending }) =>
+        navigationlist.map((list,id) => <li key={id} className=" capitalize  px-4 font-semibold text-[17px] "><NavLink to={`/${list === "Home"?"":list.replace(/\s+/g, "_")}`}  className={({ isActive, isPending }) =>
           isPending ? "text-green-400" : isActive ? "text-[#ff4f01]" : "text-[#131D3B] hover:text-[#ff4f01]"
         } >{list}</NavLink></li>)
         

@@ -1,6 +1,7 @@
-import { useState } from "react";
+
 import { FiArrowDownLeft, FiArrowUpRight } from "react-icons/fi";
 import Poopup from "../Poopup/Poopup";
+import { useState } from "react";
 
 
 
@@ -20,13 +21,13 @@ function ImageCatagory() {
        {/* imageCatagry menu list */}
        <ul className="flex justify-center py-10">
            {
-            menulist.map((item,id) => <li className="btn hover:text-white btn-outline capitalize rounded-none mx-1 hover:bg-[#ff4f01] hover:border-[#ff4f01] " key={id}>{item}</li>)
+            menulist.map((item,id) => <li key={id} className="btn hover:text-white btn-outline capitalize rounded-none mx-1 hover:bg-[#ff4f01] hover:border-[#ff4f01] " >{item}</li>)
            }
        </ul>
         {/* all image  */}
        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-11/12 max-w-[1280px]  mx-auto">
          {
-            imgelist.map((item,id) => <button onClick={() => setImagepoopup(item) }><div className="relative m-2 group ">
+            imgelist.map((item,id) => <button key={id} onClick={() => setImagepoopup(item) }><div className="relative m-2 group ">
             <div className=" z-20 group-hover:absolute group-hover:block hidden  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 ">
             <FiArrowUpRight size={30} className="text-[#ff4f01] ml-8" />
             <FiArrowDownLeft size={30}  className="text-[#ff4f01]" />

@@ -1,5 +1,4 @@
 import { Rating } from '@mui/material';
-import React from 'react';
 interface HappyStudentProps {
     name?: string;
     course?: string;
